@@ -83,7 +83,7 @@ app.delete('/todos/:id', async (req, res) => {
 //signup
 app.post('/signup', async (req, res) => {
     const { email, password } = req.body;
-    const salt = bcrypt.genSaltSync(10);
+    const salt = bcrypt.genSaltSync(5);
     const hashedPassword = bcrypt.hashSync(password, salt);
 
     try {
